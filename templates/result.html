@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarot Card Reading Results</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f5f5f5;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        .card {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 20px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        img {
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Your Tarot Reading Results</h1>
+        <div class="row">
+            <div class="col-4 card">
+                <h3>Past</h3>
+                <img src="{{ past_img }}" alt="Tarot card representing the past" class="img-fluid">
+                <p>{{ past_description }}</p>
+            </div>
+            <div class="col-4 card">
+                <h3>Present</h3>
+                <img src="{{ present_img }}" alt="Tarot card representing the present" class="img-fluid">
+                <p>{{ present_description }}</p>
+            </div>
+            <div class="col-4 card">
+                <h3>Future</h3>
+                <img src="{{ future_img }}" alt="Tarot card representing the future" class="img-fluid">
+                <p>{{ future_description }}</p>
+            </div>
+        </div>
+        <hr>
+        <p>{{ response_text }}</p>
+    </div>
+</body>
+</html>
